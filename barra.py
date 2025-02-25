@@ -9,8 +9,8 @@ def barra(qt_itens:int, iteravel:Iterable):
     grafico = ESQUERDA + ' ' * LARG_MIOLO + DIREITA
     print(grafico, end='', flush=True)
     for n, item in enumerate(iteravel, 1):
-        preenchido = int(LARG_MIOLO * n / qt_itens)
-        conteudo = MIOLO * preenchido + ' ' * (LARG_MIOLO - preenchido)
+        qt_miolo = int(LARG_MIOLO * n / qt_itens)
+        conteudo = (MIOLO * qt_miolo).ljust(LARG_MIOLO)
         grafico = ESQUERDA + conteudo + DIREITA
         print('\r' + grafico, end='', flush=True)
         yield item
