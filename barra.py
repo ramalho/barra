@@ -1,4 +1,3 @@
-import time
 from collections.abc import Iterable
 
 ESQUERDA, MIOLO, DIREITA = '[=]'
